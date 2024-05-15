@@ -1,0 +1,14 @@
+header{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header h3{
+    flex: 1 0 10%;
+
+}
+
+header nav{
+    flex:1 0 90% ;
+    text-align: right;
+}
