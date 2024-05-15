@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -23,6 +24,34 @@
             <h1>Code Quiz Challenge</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sequi nobis ipsa eveniet aliquid illum similique hic voluptate provident eligendi! Qui dicta odit expedita. Aperiam beatae reiciendis quod ipsa expedita.</p>
             <button id="start-quiz">Start Quiz</button>
+        </section>
+
+        <section class="hide" id="question-section">
+            <h1 id="question-title">Q1</h1>
+            <ol id="choice-list">
+                <li><button>choice1</button></li>
+                <li><button>choice2</button></li>
+                <li><button>choice3</button></li>
+                <li><button>choice4</button></li>
+
+            </ol>
+        </section>
+
+        <section class="hide" id="initial-input">
+            <h1>All Done</h1>
+            <p>Your score is <span id="score">22</span></p>
+            <label for="">Enter Initial</label> <input type="text" id="initial">
+            <button id="submit"> Submit </button>
+        </section>
+
+        <section class="hide" id="highscore">
+            <ol>
+                <li>AB - 22</li>
+                <li>AB - 10</li>
+                <li>AB - 5</li>
+            </ol>
+            <button id="goback-btn">Go Back</button>
+            <button id="clearHighscore">Clear Highscore</button>
         </section>
 
     </main>
