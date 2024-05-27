@@ -14,6 +14,7 @@ var index = 0
 var submitEl = document.getElementById("submit")
 var scoresArray = JSON.parse(localStorage.getItem("scores")) || []
 var initialName = document.getElementById("initial")
+
  
 
 function startQuiz(){
@@ -64,12 +65,24 @@ function nextQuestion(event){
  
 }
 
+function scores(){
+    for(var i=0; i < scoresArray.length; i++){
+        var scoreLi = document.createElement("li")
+        scoreLi.textContent = `${scoresArray[i].initials} ${scoresArray[i].score}`
+        var record = document.getElementById("record")
+        record.append(scoreLi)
+    }
+
+    highscoreEl.classList.remove("hide")
+}
+
 function finalScore(event){
     var score = scoreEl.textContent
     var initials = initialName.value
     var object = {score: score, initials: initials}
     scoresArray.push(object)
     localStorage.setItem("scores", JSON.stringify(scoresArray))
+    scores()
 }
 
 function endQuiz(){
@@ -78,6 +91,10 @@ function endQuiz(){
      initialInputEl.classList.remove("hide")
      scoreEl.textContent = timerEl.textContent
 }
+
+
+
+
 startQuizEl.addEventListener("click",startQuiz)
 choiceListEl.addEventListener("click",nextQuestion)
 submitEl.addEventListener("click", finalScore)
