@@ -15,7 +15,7 @@ This is a website to test the knowlege of new Wed Developers with a short quiz. 
 
 ## Installation
 
-To test your knowledge visit the website:
+To test your knowledge visit the website: https://tavaresaxel.github.io/HW-Challenge4-Code-Quiz/
 
 ## License
 
